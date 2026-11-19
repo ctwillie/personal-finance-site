@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Finance</title>
+  <meta name="description" content="A private, single-user budgeting tool for tracking my own bank transactions.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root { --bg: #ffffff; --fg: #1f2328; --muted: #57606a; --accent: #0f2d4b; --card: #f4f6f8; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9da7b3; --accent: #48c78e; --card: #161b22; } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, sans-serif; }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 16px 4rem; }
+    header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    header img { width: 64px; height: 64px; border-radius: 14px; }
+    h1 { margin: 0; font-size: 1.8rem; }
+    h2 { margin-top: 2.2rem; font-size: 1.2rem; color: var(--accent); }
+    p, li { color: var(--fg); }
+    .tagline { margin: 0; color: var(--muted); }
+    .card { background: var(--card); border-radius: 10px; padding: 1rem 1.2rem; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icon.png" alt="Personal Finance icon">
+      <div>
+        <h1>Personal Finance</h1>
+        <p class="tagline">A private budgeting tool for one person: me.</p>
+      </div>
+    </header>
+
+    <p class="card">
+      Personal Finance is a self-hosted app I built to track my own spending. It imports
+      transactions from my own bank accounts so I can categorize them and see where my money goes.
+      It is not offered to the public, and no one else can sign up or connect an account.
+    </p>
+
+    <h2>How it works</h2>
+    <ul>
+      <li>I connect my own bank accounts through <a href="https://plaid.com">Plaid</a>.</li>
+      <li>The app reads transaction history (date, amount, merchant and category). It cannot move money.</li>
+      <li>Transactions are stored in a database on my own computer, where I categorize and review them.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <ul>
+      <li>The only data collected is my own financial data, for my own use.</li>
+      <li>Data is never sold, shared or used for advertising.</li>
+      <li>Bank sign-in happens on Plaid's or the bank's own pages; the app never sees bank passwords.</li>
+      <li>I can disconnect a bank at any time, which revokes the app's access through Plaid.</li>
+    </ul>
+    <p>Plaid's handling of data is described in the <a href="https://plaid.com/legal/#end-user-privacy-policy">Plaid End User Privacy Policy</a>.</p>
+
+    <footer>Personal Finance · a personal project, not a commercial service.</footer>
+  </main>
+</body>
+</html>
